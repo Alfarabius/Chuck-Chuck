@@ -19,7 +19,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || !controller.IsGrounded())
         {
             isJumping = true;
             animator.SetBool("IsJumping", true);
@@ -30,7 +30,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, isJumping);
+        controller.Move(horizontalMove * Time.fixedDeltaTime, isJumping);
         isJumping = false;
     }
 

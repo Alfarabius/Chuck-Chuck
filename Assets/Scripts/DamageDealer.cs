@@ -51,9 +51,12 @@ public class DamageDealer : MonoBehaviour
         {
             float speed = Mathf.Abs(rb.velocity.x);
 
-            Debug.Log(speed);
-
             damage = (int) speed;
+
+            if (damage < 4)
+            {
+                damage = 0;
+            }
 
             if (damage > maxDamage)
             {

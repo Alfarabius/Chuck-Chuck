@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &683726089855852536
 Transform:
@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79553d474fb603c46bad015ef03df7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  maxDamage: 5
+  isPhysicBased: 1
 --- !u!114 &5565438545726989139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 5
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: b9200b14576c7214d9e3a8a438983047, type: 2}

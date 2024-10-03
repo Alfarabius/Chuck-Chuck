@@ -989,7 +989,7 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 104
-        width: 9
+        width: 11
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1010,7 +1010,7 @@ TextureImporter:
         serializedVersion: 2
         x: 24
         y: 104
-        width: 9
+        width: 11
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1031,7 +1031,7 @@ TextureImporter:
         serializedVersion: 2
         x: 40
         y: 104
-        width: 9
+        width: 11
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1052,7 +1052,7 @@ TextureImporter:
         serializedVersion: 2
         x: 56
         y: 104
-        width: 9
+        width: 11
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1073,7 +1073,7 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 104
-        width: 9
+        width: 11
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1094,7 +1094,7 @@ TextureImporter:
         serializedVersion: 2
         x: 160
         y: 104
-        width: 9
+        width: 11
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1115,7 +1115,7 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1136,7 +1136,7 @@ TextureImporter:
         serializedVersion: 2
         x: 24
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1157,7 +1157,7 @@ TextureImporter:
         serializedVersion: 2
         x: 40
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1178,7 +1178,7 @@ TextureImporter:
         serializedVersion: 2
         x: 56
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1199,7 +1199,7 @@ TextureImporter:
         serializedVersion: 2
         x: 72
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1220,7 +1220,7 @@ TextureImporter:
         serializedVersion: 2
         x: 88
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1241,7 +1241,7 @@ TextureImporter:
         serializedVersion: 2
         x: 104
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1262,7 +1262,7 @@ TextureImporter:
         serializedVersion: 2
         x: 120
         y: 82
-        width: 8
+        width: 10
         height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1550,6 +1550,762 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 1bit 1_63
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 65
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfd9f056e83957489c12c4b33cd24b7
+      internalID: -365858977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_64
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 65
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f5ecab63c0b534281706750973e348
+      internalID: 147773610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_65
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f5aca12ab4bbb489dbc272b16bda56
+      internalID: 17048722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_66
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d27bdfdce1f1b245b3645e119dee403
+      internalID: -691763667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_67
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f70ff3a0512ded468a8f3341763b610
+      internalID: -717566668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_68
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176b33b804769b6449f010c0768d8fb6
+      internalID: 1184303886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_69
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 65
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de800fcc9f17d947b23cdfc0a9813e8
+      internalID: -1446725934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_70
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 65
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a024b4f65823ba4daa473e8e232996c
+      internalID: 2142666910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_71
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 50
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c01e00dbb96644db28a5aaef220cef
+      internalID: 1239850937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_72
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 50
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1070c5bbc5a23884fa65bfdc1bd09014
+      internalID: 153327035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_73
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 50
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b700fa1fbe69940b929b83b20080a0
+      internalID: -132773267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dce126725dbbc44e8ed6f07b3beead4
+      internalID: 33281554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_75
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 80
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83341e7ea3d6ce6409b3cab79564e12c
+      internalID: 132480443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_76
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 80
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5395e902d4831df49aee9035a0692cbe
+      internalID: 1778850347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_77
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 80
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad8cd03e5545834bb271d04ca3bdd28
+      internalID: -1318224285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_78
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 104
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f3b171ea48aec4d8c701d2ddbefc95
+      internalID: 1920849594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_79
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 104
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338b27281858b364ca62fb87a83f9aa6
+      internalID: -843386368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_80
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 104
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0b7a043a81ca84c8431074d476e020
+      internalID: 2017780369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_81
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 104
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c6c9158d255ca41b7390020b24c825
+      internalID: 1791978625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_82
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b23d2e85d79834c91ffc63cd63b3df
+      internalID: 628503649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_83
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8308cc05c77f14da9664db92e7f229
+      internalID: -1958142553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_84
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80636fbc50d32c4b8d2a402669a2aea
+      internalID: 251413588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_85
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43b214a546dd7e4da8d3e0adab06f02
+      internalID: 986152816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_86
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d6c8defca70594bbc1ac1de7f80ccf
+      internalID: -645761137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_87
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d62ae8bcf50f4a45b22a9a22d438ea0
+      internalID: -1718989868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_88
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81bc350ff829774a895a2a65054923d
+      internalID: 1334849729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_89
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 166
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f34e1be54e28d40ab7bbc41261378f
+      internalID: -1272762026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_90
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 271
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c628e131b1cb097459e9cc4c5116e8ec
+      internalID: 937169987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_91
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 271
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fed7e63e33db145b59dcfd7c0dbeec
+      internalID: 433910134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_92
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 271
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfbc14964b7da94ea4c8231889022d9
+      internalID: 525845352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_93
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d92746f58c431543a064fb27be0f865
+      internalID: -994575348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_94
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c959944db776e204b9de1363b5c625e2
+      internalID: -1548594517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_95
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184ff4ecba2609f4a99c29c23f59e189
+      internalID: 1422144919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_96
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea966bb74ed3ca4fa5379b6db49d10c
+      internalID: 1777711764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f2b852bb135cd428e390645fc074ab
+      internalID: -1318546781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_98
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 256
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb7050c6dcbec243bb51a29da1b08f0
+      internalID: -599533881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1621,9 +2377,45 @@ TextureImporter:
       1bit 1_60: 57542567
       1bit 1_61: 502938898
       1bit 1_62: -327569119
+      1bit 1_63: -365858977
+      1bit 1_64: 147773610
+      1bit 1_65: 17048722
+      1bit 1_66: -691763667
+      1bit 1_67: -717566668
+      1bit 1_68: 1184303886
+      1bit 1_69: -1446725934
       1bit 1_7: -1455615873
+      1bit 1_70: 2142666910
+      1bit 1_71: 1239850937
+      1bit 1_72: 153327035
+      1bit 1_73: -132773267
+      1bit 1_74: 33281554
+      1bit 1_75: 132480443
+      1bit 1_76: 1778850347
+      1bit 1_77: -1318224285
+      1bit 1_78: 1920849594
+      1bit 1_79: -843386368
       1bit 1_8: 1615102513
+      1bit 1_80: 2017780369
+      1bit 1_81: 1791978625
+      1bit 1_82: 628503649
+      1bit 1_83: -1958142553
+      1bit 1_84: 251413588
+      1bit 1_85: 986152816
+      1bit 1_86: -645761137
+      1bit 1_87: -1718989868
+      1bit 1_88: 1334849729
+      1bit 1_89: -1272762026
       1bit 1_9: 631366754
+      1bit 1_90: 937169987
+      1bit 1_91: 433910134
+      1bit 1_92: 525845352
+      1bit 1_93: -994575348
+      1bit 1_94: -1548594517
+      1bit 1_95: 1422144919
+      1bit 1_96: 1777711764
+      1bit 1_97: -1318546781
+      1bit 1_98: -599533881
       Scull: 571967767
       Tree 1_0: 1776761552
       Tree 1_1: 1441935360

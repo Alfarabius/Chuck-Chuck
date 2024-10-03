@@ -14,11 +14,23 @@ public class Grab : MonoBehaviour
 
     [SerializeField] private GameObject grabbedObject;
 
+    [SerializeField] CharacterController2D controller2D;
+
     private int layerIndex;
+
+    // private Vector3 cursorPosition;
+
+    private Vector3 side;
 
     void Start()
     {
         layerIndex = LayerMask.NameToLayer("Items");
+        // Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Debug.DrawRay(rayPoint.position, side * rayDistance);
     }
 
     void Update()
@@ -36,9 +48,19 @@ public class Grab : MonoBehaviour
             return;
         }
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.position, transform.right, rayDistance);
+        // cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // cursorPosition.z = 0f;
 
-        Debug.DrawRay(rayPoint.position, transform.right * rayDistance);
+        if (controller2D.IsFacingRight())
+        {
+            side = Vector3.right;
+        }
+        else if (!controller2D.IsFacingRight())
+        {
+            side = Vector3.left;
+        }
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.position, side, rayDistance);
 
         if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerIndex)
         {

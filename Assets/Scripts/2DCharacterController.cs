@@ -91,4 +91,6 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 	public bool IsGrounded() => m_Grounded;
+
+	public bool IsFacingRight() => m_FacingRight;
 }

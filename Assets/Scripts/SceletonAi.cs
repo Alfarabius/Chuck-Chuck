@@ -5,17 +5,14 @@ using System;
 public class SceletonAi : MonoBehaviour
 {
     [SerializeField] private Transform target;
-
     [SerializeField] private float speed = 400f;
-
+    [SerializeField] private float toJumpValue = 0.4f;
+    [SerializeField] private float graphUpdateTime = 1.5f;
     [SerializeField] private float nextWayPointDistance = 1.1f;
-
     [SerializeField] private Transform enemySprite;
-
     [SerializeField] private Animator animator;
 
     private Path path;
-
     private int currentWayPoint = 0;
 
     Seeker seeker;
@@ -23,7 +20,6 @@ public class SceletonAi : MonoBehaviour
     CharacterController2D characterController2D;
 
     private float horizontalMove = 0f;
-
     private bool isJumping = false;
 
     void Start()
@@ -33,7 +29,7 @@ public class SceletonAi : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
-        InvokeRepeating("UpdatePath", 0f, 1.5f);
+        InvokeRepeating("UpdatePath", 0f, graphUpdateTime);
     }
 
     void UpdatePath()
@@ -61,17 +57,19 @@ public class SceletonAi : MonoBehaviour
             return;
 
         animator.SetBool("IsRunning", Mathf.Abs(horizontalMove) > 0.01f);
+
         if (!characterController2D.IsGrounded())
         {
             animator.SetBool("IsJumping", true);
         }
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
+        Vector2 rawDirection = (Vector2)path.vectorPath[currentWayPoint] - rb.position;
+        Vector2 direction = rawDirection.normalized;
         Vector2 force = speed * direction;
 
         horizontalMove = force.x;
 
-        if (force.y >= 0.01)
+        if (rawDirection.y >= toJumpValue)
         {
             isJumping = true;
         }

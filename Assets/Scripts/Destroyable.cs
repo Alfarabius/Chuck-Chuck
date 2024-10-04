@@ -42,6 +42,16 @@ public class Destroyable : MonoBehaviour
         Destroy(gameObject);
         OnDestroy.Invoke();
     }
+
+    public void Heal10()
+    {
+        HitPoints += 10;
+
+        if (HitPoints > MaxHitPoints)
+        {
+            HitPoints = MaxHitPoints;
+        }
+    }
 }
 
 

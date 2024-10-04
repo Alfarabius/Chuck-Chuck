@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 
 public class PlayerMovementController : MonoBehaviour
 {
     [SerializeField] private CharacterController2D controller;
-
     [SerializeField] private Animator animator;
-
     [SerializeField] private float runSpeed = 40f;
+    [SerializeField] UnityEvent onJump;
 
     private float horizontalMove = 0f;
 
@@ -18,6 +18,8 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        if (Input.GetButtonDown("Jump")) onJump.Invoke();
 
         if (Input.GetButtonDown("Jump") || !controller.IsGrounded())
         {

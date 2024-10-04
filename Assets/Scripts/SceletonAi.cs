@@ -5,6 +5,7 @@ using System;
 public class SceletonAi : MonoBehaviour
 {
     [SerializeField] private Transform target;
+    private Transform currentTarget;
     [SerializeField] private float speed = 400f;
     [SerializeField] private float toJumpValue = 0.4f;
     [SerializeField] private float graphUpdateTime = 1.5f;
@@ -29,13 +30,15 @@ public class SceletonAi : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
+        currentTarget = target;
+
         InvokeRepeating("UpdatePath", 0f, graphUpdateTime);
     }
 
     void UpdatePath()
     {
         if (seeker.IsDone())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, currentTarget.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)
@@ -98,4 +101,18 @@ public class SceletonAi : MonoBehaviour
     {
         animator.SetBool("IsJumping", false);
     }
+
+    public void OnNewTarget(Transform newTarget)
+    {
+        currentTarget = newTarget;
+        animator.SetBool("IsAttacking", true);
+    }
+
+    public void OnNoNewTarget()
+    {
+        currentTarget = target;
+        animator.SetBool("IsAttacking", false);
+    }
+
+    public void SetTarget(Transform _target) => target = _target;
 }

@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3162081868179656001}
+  - component: {fileID: 6426119141514554098}
   - component: {fileID: 5576430337060677631}
   - component: {fileID: 4683757144620970476}
   - component: {fileID: 4360806025609632870}
@@ -137,7 +138,7 @@ GameObject:
   - component: {fileID: 7653125923851162148}
   m_Layer: 9
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -156,8 +157,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6463152615845466685}
+  - {fileID: 9048386593608637454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6426119141514554098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7705897362092277283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4275b7f54503cb44db2723c8860fdda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5576430337060677631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,12 +191,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayHit
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 782baa0b30427894fa1cc4f62f5eba9f, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -334,3 +348,89 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!1001 &7942946423338302032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3162081868179656001}
+    m_Modifications:
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: targetsMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: OnNewTarget.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6426119141514554098}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: OnNewTargetExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6426119141514554098}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: OnNewTarget.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GhostAI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: OnNewTargetExit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GhostAI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9217984530417051404, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: m_Name
+      value: Target Detector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+--- !u!4 &9048386593608637454 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+  m_PrefabInstance: {fileID: 7942946423338302032}
+  m_PrefabAsset: {fileID: 0}

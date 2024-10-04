@@ -18,19 +18,14 @@ public class Grab : MonoBehaviour
 
     private int layerIndex;
 
-    // private Vector3 cursorPosition;
+    private Vector3 cursorPosition;
 
     private Vector3 side;
 
     void Start()
     {
         layerIndex = LayerMask.NameToLayer("Items");
-        // Cursor.lockState = CursorLockMode.None;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Debug.DrawRay(rayPoint.position, side * rayDistance);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Update()
@@ -48,8 +43,9 @@ public class Grab : MonoBehaviour
             return;
         }
 
-        // cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // cursorPosition.z = 0f;
+        //cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursorPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        cursorPosition.z = 0f;
 
         if (controller2D.IsFacingRight())
         {
@@ -60,7 +56,10 @@ public class Grab : MonoBehaviour
             side = Vector3.left;
         }
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.position, side, rayDistance);
+        cursorPosition.x *= side.x;
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.position, cursorPosition.normalized, rayDistance);
+        Debug.DrawRay(rayPoint.position, cursorPosition.normalized * rayDistance);
 
         if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerIndex)
         {

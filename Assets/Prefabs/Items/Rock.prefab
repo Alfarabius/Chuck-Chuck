@@ -64,7 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitPoints: 100
   MaxHitPoints: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 57263297239609732, guid: 97fb740032c95f047a161428161fcdc9, type: 3}
   OnDestroy:
     m_PersistentCalls:
       m_Calls: []

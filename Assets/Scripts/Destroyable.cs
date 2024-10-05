@@ -13,14 +13,30 @@ public class Destroyable : MonoBehaviour
 
     [SerializeField] private UnityEvent OnDestroy;
 
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        if (gameObject.CompareTag("Ghost"))
+        {
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            return;
+        }
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     public void TakeDamage(int amount)
     {
         HitPoints -= amount;
 
         if (HitPoints <= 0)
         {
+            HitPoints = 0;
             Die();
         }
+        spriteRenderer.enabled = false;
+        StartCoroutine(TurnOnSprite(0.15f));
     }
 
     public void Heal(int amount)
@@ -51,6 +67,18 @@ public class Destroyable : MonoBehaviour
         {
             HitPoints = MaxHitPoints;
         }
+    }
+
+    private IEnumerator TurnOnSprite(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        spriteRenderer.enabled = true;
+    }
+
+    public string GetHitPoints()
+    {
+        return HitPoints.ToString() + "/" + MaxHitPoints.ToString();
     }
 }
 

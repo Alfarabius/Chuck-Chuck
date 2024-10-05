@@ -11,9 +11,16 @@ public class Collectible : MonoBehaviour
     {
         GameObject GameManager = GameObject.FindGameObjectWithTag("GameManager");
         GameObject Player = GameObject.FindGameObjectWithTag("Player");
+        GameObject UIManager = GameObject.FindGameObjectWithTag("UIManager");
+
+        if (Player == null)
+            return;
 
         if(gameObject.CompareTag("Coin"))
+        {
             OnCollected.AddListener(GameManager.GetComponent<AudioManager>().PlayCoin);
+            OnCollected.AddListener(UIManager.GetComponent<UIManager>().OnCoinCollected);
+        }
         else if (gameObject.CompareTag("Potion"))
         {
             OnCollected.AddListener(GameManager.GetComponent<AudioManager>().PlayHeal);

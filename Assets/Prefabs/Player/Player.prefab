@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4757636348556571049}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -131,7 +131,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5438679143540694818}
-  - {fileID: 5129982409492346009}
   - {fileID: 39166825425386945}
   - {fileID: 9111361821887706222}
   m_Father: {fileID: 0}
@@ -150,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabPoint: {fileID: 39166825425386945}
   rayPoint: {fileID: 9111361821887706222}
-  rayDistance: 1
+  rayDistance: 2
   force: 100
   grabbedObject: {fileID: 0}
 --- !u!114 &8703366730637814172
@@ -165,12 +164,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98693bddaa3f414784a91c46779245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 10
-  MaxHitPoints: 10
+  HitPoints: 40
+  MaxHitPoints: 40
   DeathEffect: {fileID: 0}
   OnDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1188738937519650728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,20 +194,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032c7526eee8b7a4c91e68430fc30235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
+  m_JumpForce: 850
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 704
   m_GroundCheck: {fileID: 5438679143540694818}
-  m_CeilingCheck: {fileID: 5129982409492346009}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1012696922356872786}
         m_TargetAssemblyTypeName: PlayerMovementController, Assembly-CSharp
         m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -221,6 +244,21 @@ MonoBehaviour:
   controller: {fileID: 1188738937519650728}
   animator: {fileID: 8873675600071544097}
   runSpeed: 50
+  onJump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &3161202516370857940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -356,34 +394,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.057189703}
   m_Size: {x: 1.5, y: 2.1156206}
   m_Direction: 0
---- !u!1 &8645715045367303549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5129982409492346009}
-  m_Layer: 3
-  m_Name: Ceiling Check
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5129982409492346009
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8645715045367303549}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8633829161483512493}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

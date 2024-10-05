@@ -19,11 +19,17 @@ public class PlayerMovementController : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        if (Input.GetButtonDown("Jump")) onJump.Invoke();
-
-        if (Input.GetButtonDown("Jump") || !controller.IsGrounded())
+        if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
+            animator.SetBool("IsJumping", true);
+        }
+
+        if (isJumping && controller.IsGrounded())
+            onJump.Invoke();
+
+        if (!controller.IsGrounded())
+        {
             animator.SetBool("IsJumping", true);
         }
 

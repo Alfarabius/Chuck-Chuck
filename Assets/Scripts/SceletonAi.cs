@@ -37,7 +37,7 @@ public class SceletonAi : MonoBehaviour
 
     void UpdatePath()
     {
-        if (seeker.IsDone())
+        if (seeker.IsDone() && currentTarget != null)
             seeker.StartPath(rb.position, currentTarget.position, OnPathComplete);
     }
 
@@ -72,7 +72,7 @@ public class SceletonAi : MonoBehaviour
 
         horizontalMove = force.x;
 
-        if (rawDirection.y >= toJumpValue)
+        if (rawDirection.y >= toJumpValue && characterController2D.IsGrounded())
         {
             isJumping = true;
         }

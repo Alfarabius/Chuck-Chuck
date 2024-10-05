@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Pathfinding;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] int currentPauseState = 1;
     [SerializeField] GameObject SceletonSpawner;
     [SerializeField] GameObject GhostSpawner;
     [SerializeField] GameObject PotionSpawner;
@@ -16,6 +20,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Transform Player;
     [SerializeField] Transform Diamond;
+
+    [SerializeField] GameObject GameOverPanel;
+    [SerializeField] TextMeshProUGUI RestartText;
+    [SerializeField] GameObject MenuPanel;
 
     private GameObject Potion;
     private GameObject Box;
@@ -28,10 +36,27 @@ public class GameManager : MonoBehaviour
         InvokeRepeating(nameof(CheckEnemies), 0f, 10f);
         InvokeRepeating(nameof(PotionSpawn), 20f, 20f);
         InvokeRepeating(nameof(BoxSpawn), 20f, 40f);
+        TogglePause();
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            TogglePause();
+
+
+        if (Player == null || Diamond == null)
+        {
+            //Game Over
+            GameOverPanel.SetActive(true);
+
+            string finalScore = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>().OnGameOverScore();
+            RestartText.text = "Your coins: " + finalScore + "\nPress R to restart";
+
+            if (Input.GetKeyDown(KeyCode.R))
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         if (sceletonList.Count == 0)
         {
             sceletonsAmount++;
@@ -94,6 +119,21 @@ public class GameManager : MonoBehaviour
 
             yield return new WaitForSeconds(1.0f);
             i++;
+        }
+    }
+
+    public void TogglePause()
+    {
+        currentPauseState = Mathf.Abs(currentPauseState - 1);
+        Time.timeScale = currentPauseState;
+
+        if (currentPauseState == 0)
+        {
+            MenuPanel.SetActive(true);
+        }
+        else
+        {
+            MenuPanel.SetActive(false);
         }
     }
 

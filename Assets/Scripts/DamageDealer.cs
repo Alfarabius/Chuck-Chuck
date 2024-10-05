@@ -35,7 +35,7 @@ public class DamageDealer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Finish"))
             return;
 
         Destroyable destroyable = other.GetComponent<Destroyable>();
@@ -55,7 +55,7 @@ public class DamageDealer : MonoBehaviour
 
             if (damage < 4)
             {
-                damage = 0;
+                return;
             }
 
             if (damage > maxDamage)

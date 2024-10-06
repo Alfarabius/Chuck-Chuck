@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 4213997743465843225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.088, y: -0.859, z: 0}
+  m_LocalPosition: {x: -0.088, y: -0.881, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -70,6 +70,7 @@ Transform:
   m_Children:
   - {fileID: 633925122640572021}
   - {fileID: 6393941058570582560}
+  - {fileID: 4877797366857702691}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1756484807729560415
@@ -84,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032c7526eee8b7a4c91e68430fc30235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 1000
+  m_JumpForce: 850
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -92,11 +93,25 @@ MonoBehaviour:
     m_Bits: 712
   m_GroundCheck: {fileID: 633925122640572021}
   m_Grounded: 0
+  fallGravity: 6
+  normalGravity: 3
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3817616972121960043}
         m_TargetAssemblyTypeName: SceletonAi, Assembly-CSharp
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3252986098418279138}
+        m_TargetAssemblyTypeName: LandEffect, Assembly-CSharp
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
@@ -197,10 +212,10 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: 4e03a1762e8679645a878faa5b4cca7f, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -388,4 +403,81 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1416751634133476958, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
   m_PrefabInstance: {fileID: 5409535219287497854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8512707203892538210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 459302251154442732}
+    m_Modifications:
+    - target: {fileID: 3653145283274611003, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_Name
+      value: Land
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653145283274611003, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+--- !u!114 &3252986098418279138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6559452753333913984, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+  m_PrefabInstance: {fileID: 8512707203892538210}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307a8b8ad4c5eb8479785ff6fce2a032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &4877797366857702691 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+  m_PrefabInstance: {fileID: 8512707203892538210}
   m_PrefabAsset: {fileID: 0}

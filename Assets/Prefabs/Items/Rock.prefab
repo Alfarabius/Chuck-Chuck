@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79553d474fb603c46bad015ef03df7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AltSprite: {fileID: 1593655322, guid: 049bacc09ffd4164285b5006907cd665, type: 3}
   maxDamage: 5
   isPhysicBased: 1
 --- !u!114 &3324171229340334502

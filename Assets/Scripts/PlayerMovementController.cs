@@ -12,7 +12,6 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] UnityEvent onJump;
 
     private float horizontalMove = 0f;
-
     private bool isJumping = false;
 
     void Update()

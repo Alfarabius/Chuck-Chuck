@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
+    [SerializeField] private Sprite AltSprite;
     [SerializeField] private int maxDamage = 5;
-
     [SerializeField] private bool isPhysicBased = true;
 
     private Destroyable selfDestroyable;
-
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private Sprite OrigSprite;
 
     private void Awake()
     {
@@ -21,6 +22,8 @@ public class DamageDealer : MonoBehaviour
         {
             rb = GetComponent<Rigidbody2D>();
         }
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        OrigSprite = spriteRenderer.sprite;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -69,5 +72,15 @@ public class DamageDealer : MonoBehaviour
             target.TakeDamage(damage);
             selfDestroyable.TakeDamage(damage);
         }
+    }
+
+    public void Select()
+    {
+        spriteRenderer.sprite = AltSprite;
+    }
+
+    public void Unselect()
+    {
+        spriteRenderer.sprite = OrigSprite;
     }
 }

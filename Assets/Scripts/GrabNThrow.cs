@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,14 @@ using UnityEngine;
 public class Grab : MonoBehaviour
 {
     [SerializeField] private Transform grabPoint;
-
     [SerializeField] private Transform rayPoint;
-
     [SerializeField] private float rayDistance;
-
     [SerializeField] private float force = 2f;
-
     [SerializeField] private GameObject grabbedObject;
 
     private int layerIndex;
     private Vector3 cursorPosition;
+    GameObject oldTarget;
 
     void Start()
     {
@@ -32,6 +30,8 @@ public class Grab : MonoBehaviour
 
         if (grabbedObject != null && Input.GetMouseButtonDown(0))
         {
+            CheckFacing(cursorPosition);
+
             Rigidbody2D rb = grabbedObject.GetComponent<Rigidbody2D>();
 
             rb.bodyType = RigidbodyType2D.Dynamic;
@@ -46,11 +46,39 @@ public class Grab : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.position, cursorPosition.normalized, rayDistance);
         Debug.DrawRay(rayPoint.position, cursorPosition.normalized * rayDistance);
 
-        if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == layerIndex)
+        if (hitInfo.collider == null)
+            return;
+
+        GameObject target = hitInfo.collider.gameObject;
+        bool isOldTargetDamageDealer = false;
+
+        bool isTargetDamageDealer = target.TryGetComponent<DamageDealer>(out DamageDealer targetDamageDealer);
+        if (oldTarget != null)
+            isOldTargetDamageDealer = oldTarget.TryGetComponent<DamageDealer>(out DamageDealer oldTargetDamageDealer);
+
+        if (isTargetDamageDealer)
+        {
+            if (target != oldTarget && grabbedObject == null)
+            {
+                if (oldTarget != null && isOldTargetDamageDealer)
+                    oldTarget.GetComponent<DamageDealer>().Unselect();
+                targetDamageDealer.Select();
+            }
+        }
+        else
+        {
+            if (oldTarget != null && isOldTargetDamageDealer)
+                oldTarget.GetComponent<DamageDealer>().Unselect();
+        }
+
+        oldTarget = target;
+
+        if (hitInfo.collider != null && target.layer == layerIndex)
         {
             if(Input.GetMouseButtonDown(0) && grabbedObject == null)
             {
                 grabbedObject = hitInfo.collider.gameObject;
+                grabbedObject.GetComponent<DamageDealer>().Unselect();
 
                 Rigidbody2D rb = grabbedObject.GetComponent<Rigidbody2D>();
 
@@ -61,6 +89,20 @@ public class Grab : MonoBehaviour
                 grabbedObject.transform.position = grabPoint.position;
                 grabbedObject.transform.SetParent(transform);
             }
+        }
+    }
+
+    private void CheckFacing(Vector3 cursorPosition)
+    {
+        CharacterController2D characterController = GetComponent<CharacterController2D>();
+
+        if (cursorPosition.x < -0.1f && characterController.IsFacingRight())
+        {
+            characterController.Move(-0.01f, false);
+        }
+        else if (cursorPosition.x > 0.1f && !characterController.IsFacingRight())
+        {
+            characterController.Move(0.01f, false);
         }
     }
 }

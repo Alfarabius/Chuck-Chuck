@@ -22,6 +22,7 @@ public class SceletonAi : MonoBehaviour
 
     private float horizontalMove = 0f;
     private bool isJumping = false;
+    private AudioManager audioManager;
 
     void Start()
     {
@@ -29,6 +30,8 @@ public class SceletonAi : MonoBehaviour
         animator = GetComponent<Animator>();
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+
+        audioManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
 
         currentTarget = target;
 
@@ -79,7 +82,7 @@ public class SceletonAi : MonoBehaviour
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
 
-        if(distance < nextWayPointDistance)
+        if (distance < nextWayPointDistance)
         {
             currentWayPoint++;
         }
@@ -87,12 +90,6 @@ public class SceletonAi : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (path == null)
-            return;
-
-        if (currentWayPoint >= path.vectorPath.Count)
-            return;
-
         characterController2D.Move(horizontalMove * Time.fixedDeltaTime, isJumping);
         isJumping = false;
     }
@@ -112,6 +109,16 @@ public class SceletonAi : MonoBehaviour
     {
         currentTarget = target;
         animator.SetBool("IsAttacking", false);
+    }
+
+    public void OnJumpStart()
+    {
+        audioManager.PlayEnemyLand();
+    }
+
+    public void OnHit()
+    {
+        audioManager.PlayEnemyHit();
     }
 
     public void SetTarget(Transform _target) => target = _target;

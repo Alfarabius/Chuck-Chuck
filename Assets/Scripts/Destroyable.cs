@@ -6,13 +6,9 @@ using UnityEngine.Events;
 public class Destroyable : MonoBehaviour
 {
     [SerializeField] private int HitPoints = 10;
-
     [SerializeField] private int MaxHitPoints = 10;
-
     [SerializeField] private GameObject DeathEffect;
-
     [SerializeField] private UnityEvent OnDestroy;
-
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -24,6 +20,9 @@ public class Destroyable : MonoBehaviour
         }
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        var audioManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<AudioManager>();
+        OnDestroy.AddListener(audioManager.PlayHit);
     }
 
     public void TakeDamage(int amount)

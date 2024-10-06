@@ -1386,9 +1386,9 @@ TextureImporter:
       name: 1bit 1_55
       rect:
         serializedVersion: 2
-        x: 416
+        x: 418
         y: 32
-        width: 8
+        width: 3
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2357,7 +2357,7 @@ TextureImporter:
         width: 129
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2378,7 +2378,7 @@ TextureImporter:
         width: 19
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2386,6 +2386,174 @@ TextureImporter:
       bones: []
       spriteID: 8784d9dcd42efdd48be22d7e337448c5
       internalID: 968174822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_103
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 270
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4aec01f158dad34a8c553428ab22e4b
+      internalID: -1450727185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_104
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 270
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75908ca277a91a44d868b45b6f70e6f6
+      internalID: -945944165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_105
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 270
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59746049c0eac854ea90888a1f33dd6c
+      internalID: 1593655322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_106
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f811bd2d4b9e6704cbcdfd955689421e
+      internalID: -490736594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_107
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b670e7c35e67f45977fc0a69c33c24
+      internalID: 1221142350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_108
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 112
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d379be41918105e45aef3a787b227509
+      internalID: -732540714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_110
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 56
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a05dc350f4aed4e93288e4a26c8d29
+      internalID: 739109960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1bit 1_109
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 32
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3a41264c51a414783edc3d857f760a
+      internalID: 2108034937
       vertices: []
       indices: 
       edges: []
@@ -2407,7 +2575,15 @@ TextureImporter:
       1bit 1_100: 1849580179
       1bit 1_101: 968174822
       1bit 1_102: 725039204
+      1bit 1_103: -1450727185
+      1bit 1_104: -945944165
+      1bit 1_105: 1593655322
+      1bit 1_106: -490736594
+      1bit 1_107: 1221142350
+      1bit 1_108: -732540714
+      1bit 1_109: 2108034937
       1bit 1_11: -278890426
+      1bit 1_110: 739109960
       1bit 1_12: -66715339
       1bit 1_13: 1304855196
       1bit 1_14: 1554908826

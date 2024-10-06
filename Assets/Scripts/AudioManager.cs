@@ -13,6 +13,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip gameOver;
     [SerializeField] AudioClip coin;
     [SerializeField] AudioClip button;
+    [SerializeField] AudioClip land;
+    [SerializeField] AudioClip enemy_land;
+    [SerializeField] AudioClip enemy_hit;
 
     public void PlayBoom()
     {
@@ -52,5 +55,20 @@ public class AudioManager : MonoBehaviour
     public void PlayButton()
     {
         audioSource.PlayOneShot(button);
+    }
+
+    public void PlayLand()
+    {
+        audioSource.PlayOneShot(land);
+    }
+
+    public void PlayEnemyLand()
+    {
+        audioSource.PlayOneShot(enemy_land);
+    }
+
+    public void PlayEnemyHit()
+    {
+        audioSource.PlayOneShot(enemy_hit);
     }
 }

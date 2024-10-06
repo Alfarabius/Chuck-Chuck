@@ -36,7 +36,7 @@ public class TargetDetector : MonoBehaviour
             OnNewTargetExit.Invoke();
         }
 
-        if (targets.Count > 0 && newTarget == null)
+        if (targets.Count > 0) //&& newTarget == null
         {
             foreach(GameObject t in targets)
             {

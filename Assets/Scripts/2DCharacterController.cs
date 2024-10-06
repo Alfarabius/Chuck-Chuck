@@ -15,6 +15,9 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
+	[SerializeField] private float fallGravity = 6f;
+	[SerializeField] private float normalGravity = 3f;
+
 	[Header("Events")]
 	[Space]
 
@@ -41,9 +44,18 @@ public class CharacterController2D : MonoBehaviour
 			if (colliders[i].gameObject != gameObject)
 			{
 				m_Grounded = true;
-				if (!wasGrounded)
+				if (!wasGrounded && m_Rigidbody2D.gravityScale == fallGravity)
+				{
 					OnLandEvent.Invoke();
+					m_Rigidbody2D.gravityScale = normalGravity;
+				}
 			}
+		}
+
+		if (!m_Grounded && m_Rigidbody2D.velocity.y < 0.01f)
+		{
+			// fall
+			m_Rigidbody2D.gravityScale = fallGravity;
 		}
 	}
 

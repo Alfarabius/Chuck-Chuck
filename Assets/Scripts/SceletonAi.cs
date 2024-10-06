@@ -75,7 +75,7 @@ public class SceletonAi : MonoBehaviour
 
         horizontalMove = force.x;
 
-        if (rawDirection.y >= toJumpValue && characterController2D.IsGrounded())
+        if (rawDirection.y >= toJumpValue && characterController2D.IsGrounded() && currentTarget == target)
         {
             isJumping = true;
         }

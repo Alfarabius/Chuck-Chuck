@@ -42,6 +42,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8458871428114503727}
     m_Modifications:
+    - target: {fileID: 3602039241054613140, guid: 2a40dc1fa309ad4429a743449378005b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4475925921332615923, guid: 2a40dc1fa309ad4429a743449378005b, type: 3}
       propertyPath: m_Name
       value: Wave 2
@@ -148,6 +152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7294524803073796613, guid: dedfef40477bb1c4bb11505dcc1e8482, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8408157552010566924, guid: dedfef40477bb1c4bb11505dcc1e8482, type: 3}
       propertyPath: m_Name
       value: Wave 3
@@ -170,6 +178,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8458871428114503727}
     m_Modifications:
+    - target: {fileID: 3239065784342532086, guid: e157bc69ef5187f41a03283e365021c4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6803373941117775957, guid: e157bc69ef5187f41a03283e365021c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.5

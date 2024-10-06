@@ -30,13 +30,29 @@ public class TargetDetector : MonoBehaviour
 
         if (targets.Count == 0 && newTarget != null)
         {
-            // targets.Remove(newTarget.gameObject);
             newTarget = null;
-
             OnNewTargetExit.Invoke();
         }
 
-        if (targets.Count > 0) //&& newTarget == null
+        if (targets.Count > 0 && newTarget != null)
+        {
+            if (newTarget.CompareTag("Player"))
+                return;
+
+            foreach(GameObject t in targets)
+            {
+                if (t.CompareTag("Player"))
+                {
+                    newTarget = t.transform;
+                    OnNewTarget.Invoke(newTarget);
+                    return;
+                }
+            }
+
+            return;
+        }
+
+        if (targets.Count > 0 && newTarget == null)
         {
             foreach(GameObject t in targets)
             {

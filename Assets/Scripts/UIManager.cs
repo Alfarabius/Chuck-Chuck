@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] GameObject Diamond;
 
-    int coinsScore = 0;
+    int coinsScore = 20;
 
     Destroyable playerHP;
     Destroyable diamondHP;
@@ -45,5 +45,15 @@ public class UIManager : MonoBehaviour
     public string OnGameOverScore()
     {
         return coinsScore.ToString();
+    }
+
+    public bool SpendCoins(int amount)
+    {
+        if (amount > coinsScore)
+        {
+            return false;
+        }
+        coinsScore -= amount;
+        return true;
     }
 }

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject GhostSpawner;
     [SerializeField] GameObject PotionSpawner;
     [SerializeField] GameObject BoxSpawner;
+    [SerializeField] GameObject Crystal;
 
     [SerializeField] private int sceletonsAmount = 3;
     [SerializeField] private int ghostAmount = 2;
@@ -135,6 +136,11 @@ public class GameManager : MonoBehaviour
         {
             MenuPanel.SetActive(false);
         }
+    }
+
+    public void SpawnCrystal(Vector3 pos)
+    {
+        Instantiate(Crystal, pos, Quaternion.identity);
     }
 
 }

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &633925122640572021
 Transform:
@@ -53,7 +53,7 @@ GameObject:
   m_TagString: Sceleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &459302251154442732
 Transform:
@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98693bddaa3f414784a91c46779245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 5
-  MaxHitPoints: 5
+  HitPoints: 12
+  MaxHitPoints: 12
   DeathEffect: {fileID: 1839976747612448623, guid: cc52f03348ad30d41bc51e84c527f219, type: 3}
   OnDestroy:
     m_PersistentCalls:
@@ -258,8 +258,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.04}
-  m_Size: {x: 1.125, y: 1.75}
+  m_Offset: {x: -0.12, y: -0.04}
+  m_Size: {x: 1.2585664, y: 1.75}
   m_Direction: 0
 --- !u!212 &221378871937628039
 SpriteRenderer:
@@ -383,6 +383,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
       propertyPath: OnNewTarget.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3817616972121960043}
@@ -419,6 +423,10 @@ PrefabInstance:
     - target: {fileID: 3653145283274611003, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653145283274611003, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3860249832007398977, guid: 136be92ad8ccbd54e8ef020ca638a4cd, type: 3}
       propertyPath: m_LocalPosition.x

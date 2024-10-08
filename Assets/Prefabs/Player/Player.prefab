@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98693bddaa3f414784a91c46779245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 40
-  MaxHitPoints: 40
+  HitPoints: 80
+  MaxHitPoints: 80
   DeathEffect: {fileID: 57263297239609732, guid: 97fb740032c95f047a161428161fcdc9, type: 3}
   OnDestroy:
     m_PersistentCalls:

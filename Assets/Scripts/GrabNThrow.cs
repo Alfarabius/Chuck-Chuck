@@ -28,7 +28,7 @@ public class Grab : MonoBehaviour
         cursorPosition.y = -rayPoint.position.y + cursorPosition.y;
         cursorPosition.z = 0f;
 
-        if (grabbedObject != null && Input.GetMouseButtonDown(0))
+        if (grabbedObject != null && Input.GetMouseButtonDown(0)) // Throw
         {
             CheckFacing(cursorPosition);
 
@@ -73,7 +73,7 @@ public class Grab : MonoBehaviour
 
         oldTarget = target;
 
-        if (hitInfo.collider != null && target.layer == layerIndex)
+        if (hitInfo.collider != null && target.layer == layerIndex) // Grab
         {
             if(Input.GetMouseButtonDown(0) && grabbedObject == null)
             {

@@ -25,12 +25,15 @@ public class Destroyable : MonoBehaviour
         OnDestroy.AddListener(audioManager.PlayHit);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, string dealer)
     {
         HitPoints -= amount;
 
+        Debug.Log(gameObject.name + " take " + amount.ToString() + "<color=red> damage </color>from " + dealer);
+
         if (HitPoints <= 0)
         {
+            Debug.Log(gameObject.name + "<color=blue> Killed by </color>" + dealer);
             HitPoints = 0;
             Die();
         }
@@ -60,7 +63,7 @@ public class Destroyable : MonoBehaviour
 
     public void Heal10()
     {
-        HitPoints += 10;
+        HitPoints += 20;
 
         if (HitPoints > MaxHitPoints)
         {

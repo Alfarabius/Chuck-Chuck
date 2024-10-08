@@ -184,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f98693bddaa3f414784a91c46779245b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoints: 5
-  MaxHitPoints: 5
+  HitPoints: 10
+  MaxHitPoints: 10
   DeathEffect: {fileID: 1839976747612448623, guid: 3389ae26365955c4daab05d22a553647, type: 3}
   OnDestroy:
     m_PersistentCalls:
@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.7
-  height: 2
+  radius: 0.58
+  height: 1.81
   canMove: 1
   maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
@@ -318,8 +318,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.19352233}
-  m_Size: {x: 1, y: 1.3629553}
+  m_Offset: {x: -0.13, y: 0.18}
+  m_Size: {x: 1.0632682, y: 1.3629553}
   m_Direction: 0
 --- !u!50 &7653125923851162148
 Rigidbody2D:
@@ -333,7 +333,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -398,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
       propertyPath: damage
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
       propertyPath: targetsMask.m_Bits
-      value: 8
+      value: 1032
       objectReference: {fileID: 0}
     - target: {fileID: 2337270208930666370, guid: daaa74f2f9241d1478e917c57946ebd8, type: 3}
       propertyPath: OnNewTarget.m_PersistentCalls.m_Calls.Array.data[0].m_Target

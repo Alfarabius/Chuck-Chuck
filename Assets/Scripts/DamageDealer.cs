@@ -6,7 +6,8 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour
 {
     [SerializeField] private Sprite AltSprite;
-    [SerializeField] private int maxDamage = 5;
+    [SerializeField] private int maxDamage = 8;
+    [SerializeField] private int minDamage = 4;
     [SerializeField] private bool isPhysicBased = true;
 
     private Destroyable selfDestroyable;
@@ -17,11 +18,7 @@ public class DamageDealer : MonoBehaviour
     private void Awake()
     {
         selfDestroyable = GetComponent<Destroyable>();
-
-        if (isPhysicBased)
-        {
-            rb = GetComponent<Rigidbody2D>();
-        }
+        rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         OrigSprite = spriteRenderer.sprite;
     }
@@ -29,34 +26,22 @@ public class DamageDealer : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            return;
+             return;
 
-        Destroyable destroyable = other.gameObject.GetComponent<Destroyable>();
-
-        DealDamage(destroyable);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Finish"))
-            return;
-
-        Destroyable destroyable = other.GetComponent<Destroyable>();
-
-        DealDamage(destroyable);
+        if(other.gameObject.TryGetComponent<Destroyable>(out Destroyable destroyable))
+            DealDamage(destroyable);
     }
 
     void DealDamage(Destroyable target)
     {
         int damage = maxDamage;
+        float speed = Mathf.Abs(rb.velocity.magnitude);
 
         if (isPhysicBased)
         {
-            float speed = Mathf.Abs(rb.velocity.x);
-
             damage = (int) speed;
 
-            if (damage < 4)
+            if (damage < minDamage)
             {
                 return;
             }
@@ -69,8 +54,10 @@ public class DamageDealer : MonoBehaviour
 
         if (target != null)
         {
-            target.TakeDamage(damage);
-            selfDestroyable.TakeDamage(damage);
+            Debug.Log(transform.name + speed.ToString() + "<color=green> speed converts to </color>" + damage.ToString() + "<color=red> damage to </color>" + target.name);
+
+            target.TakeDamage(damage, gameObject.name);
+            selfDestroyable.TakeDamage(damage, gameObject.name);
         }
     }
 

@@ -1,2 +1,1 @@
-# JamTemplate
-Template for Game Jams
+# Chuck-Chuck

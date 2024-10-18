@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032c7526eee8b7a4c91e68430fc30235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 850
+  m_JumpForce: 910
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -203,7 +203,7 @@ MonoBehaviour:
     m_Bits: 704
   m_GroundCheck: {fileID: 5438679143540694818}
   m_Grounded: 0
-  fallGravity: 6
+  fallGravity: 10
   normalGravity: 3
   OnLandEvent:
     m_PersistentCalls:
@@ -314,7 +314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1622054423, guid: 049bacc09ffd4164285b5006907cd665, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1

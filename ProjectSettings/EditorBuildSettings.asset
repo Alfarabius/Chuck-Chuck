@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Chuck Arena.unity
-    guid: 59f8d1d0dcd81774380a624585d9a6b4
   - enabled: 1
-    path: Assets/Scenes/1bit scene.unity
+    path: Assets/Scenes/Main Menu.unity
+    guid: 37b83e2ee7bd6c644912290b1bc32493
+  - enabled: 1
+    path: Assets/Scenes/Chuck Chuck.unity
     guid: 42c01e838a3db644fbd45b8685bac9d6
   m_configObjects: {}

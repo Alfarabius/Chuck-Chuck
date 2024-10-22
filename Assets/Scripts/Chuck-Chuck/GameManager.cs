@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
         InvokeRepeating(nameof(CheckEnemies), 0f, 10f);
         InvokeRepeating(nameof(PotionSpawn), 20f, 20f);
         InvokeRepeating(nameof(BoxSpawn), 20f, 40f);
-        TogglePause();
     }
 
     private void Update()

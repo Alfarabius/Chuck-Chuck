@@ -15,7 +15,7 @@ PlayerSettings:
   companyName: TurboLaser
   productName: Chuck-Chuck
   defaultCursor: {fileID: 2800000, guid: fce3cb5a43b3484459b0f4beb9eb431a, type: 3}
-  cursorHotspot: {x: 5, y: 5}
+  cursorHotspot: {x: 16, y: 16}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 854
   defaultScreenHeight: 480
-  defaultScreenWidthWeb: 854
-  defaultScreenHeightWeb: 480
+  defaultScreenWidthWeb: 1280
+  defaultScreenHeightWeb: 720
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0

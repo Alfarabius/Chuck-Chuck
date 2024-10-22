@@ -257,7 +257,7 @@ TextureImporter:
         width: 76
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
         width: 76
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,6 +286,69 @@ TextureImporter:
       bones: []
       spriteID: b64be9dd69ca86449baa34ce29b5dc9d
       internalID: -198446338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quit_Hover
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 129
+        width: 76
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb0935968e3ecf438e30ce39c710779
+      internalID: -2094732033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Start_Hover
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 129
+        width: 76
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd661ff91ea7db49ad1c46b547b379a
+      internalID: 352008243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Return_Hover
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 129
+        width: 76
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352eff3868e8796488b6556ca5707390
+      internalID: -719180245
       vertices: []
       indices: 
       edges: []
@@ -309,6 +372,9 @@ TextureImporter:
       Buttons_5: -1901852301
       Buttons_6: -2089708037
       Buttons_7: -198446338
+      Quit_Hover: -2094732033
+      Return_Hover: -719180245
+      Start_Hover: 352008243
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

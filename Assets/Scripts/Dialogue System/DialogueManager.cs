@@ -1,112 +1,95 @@
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText; // UI Text для имени персонажа
-    public TextMeshProUGUI dialogueText; // UI Text для текста диалога
-    public GameObject dialoguePanel; // Панель для показа/скрытия UI диалога
-    public GameObject optionsPanel; // Панель для показа вариантов ответов
-    public Button optionButtonPrefab; // Префаб кнопки для варианта ответа
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject optionsPanel;
+    [SerializeField] private Button optionButtonPrefab;
+    [SerializeField] private float spacing = 5f; // Промежуток между кнопками
 
-    private Queue<string> sentences; // Очередь для управления предложениями
-    private bool isDialogueActive;
+    private float buttonHeight = 30f; // Высота кнопки
+    private DialogueGraph currentDialogue;
+    private DialogueNode currentNode;
+
 
     void Start()
     {
-        sentences = new Queue<string>();
-        dialoguePanel.SetActive(false); // Скрыть панель в начале
-        optionsPanel.SetActive(false); // Скрыть панель вариантов в начале
+        dialoguePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        buttonHeight = optionButtonPrefab.GetComponent<RectTransform>().rect.height;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(string startNodeId, DialogueGraph dialogueGraph)
     {
-        isDialogueActive = true;
-        dialoguePanel.SetActive(true); // Показать панель диалога
-
-        nameText.text = dialogue.characterName; // Установить имя персонажа
-        sentences.Clear(); // Очистить предыдущие предложения
-
-        foreach (string sentence in dialogue.sentences)
+        if (dialogueGraph == null)
         {
-            sentences.Enqueue(sentence); // Добавить предложения в очередь
-        }
-
-        DisplayNextSentence(); // Показать первое предложение
-    }
-
-    public void DisplayNextSentence()
-    {
-        if (sentences.Count == 0)
-        {
-            ShowOptions(); // Показать варианты, если предложения закончились
             return;
         }
+        dialogueGraph.Initialize();
 
-        string sentence = sentences.Dequeue(); // Получить следующее предложение
-        dialogueText.text = sentence; // Отобразить его
+        currentDialogue = dialogueGraph;
+
+        currentNode = dialogueGraph.GetNode(startNodeId);
+        if (currentNode != null)
+        {
+            dialoguePanel.SetActive(true);
+            DisplayCurrentNode();
+        }
+    }
+
+    private void DisplayCurrentNode()
+    {
+        nameText.text = currentNode.characterName;
+        dialogueText.text = currentNode.text;
+
+        ShowOptions();
     }
 
     private void ShowOptions()
     {
-        optionsPanel.SetActive(true); // Показать панель вариантов
+        optionsPanel.SetActive(true);
 
         foreach (Transform child in optionsPanel.transform)
         {
-            Destroy(child.gameObject); // Удалить старые кнопки вариантов, если есть
+            Destroy(child.gameObject);
         }
 
-        Dialogue currentDialogue = GetCurrentDialogue(); // Получаем текущий диалог (это нужно реализовать)
-
-        foreach (DialogueOption option in currentDialogue.options)
+        for (int i = 0; i < currentNode.options.Count; i++)
         {
+            DialogueOption option = currentNode.options[i];
             Button button = Instantiate(optionButtonPrefab, optionsPanel.transform);
-            button.GetComponentInChildren<Text>().text = option.optionText; // Установить текст кнопки
-            button.onClick.AddListener(() => SelectOption(option)); // Добавить обработчик нажатия на кнопку
+            button.GetComponentInChildren<TextMeshProUGUI>().text = option.optionText;
+
+            // Устанавливаем позицию кнопки
+            RectTransform rectTransform = button.GetComponent<RectTransform>();
+            rectTransform.anchoredPosition = new Vector2(0, -i * (buttonHeight + spacing));
+
+            // Подписка на событие нажатия кнопки
+            button.onClick.AddListener(() => SelectOption(option));
         }
     }
 
     private void SelectOption(DialogueOption option)
     {
-        optionsPanel.SetActive(false); // Скрыть панель вариантов
+        currentNode = currentDialogue.GetNode(option.nextNodeId);
 
-		var _nextId = option.nextDialogueID;
-
-		if (_nextId == "EndDialogue") // Завершение диалога при отправки EndDialogue Id
-		{
-			EndDialogue();
-			return;
-		}
-
-        StartDialogue(GetDialogueByID(_nextId)); // Начать следующий диалог в зависимости от выбранного варианта
+        if (currentNode != null)
+        {
+            DisplayCurrentNode();
+        }
+        else
+        {
+            EndDialogue();
+        }
     }
 
     private void EndDialogue()
     {
-        isDialogueActive = false;
-        dialoguePanel.SetActive(false); // Скрыть панель по окончании диалога
-    }
-
-    void Update()
-    {
-        if (isDialogueActive && Input.GetKeyDown(KeyCode.Space)) // Нажмите пробел, чтобы продолжить
-        {
-            DisplayNextSentence();
-        }
-    }
-
-	public Dialogue GetDialogueByID(string id)
-	{
-		// Здесь вы должны реализовать логику поиска диалога по ID.
-		// Например, хранить все ваши DialogueData в списке и искать по идентификатору.
-		return null;
-	}
-
-    private Dialogue GetCurrentDialogue()
-    {
-        // Здесь вы должны вернуть текущий диалог. Это может быть реализовано через отдельную переменную.
-        return null;
+        dialoguePanel.SetActive(false);
+        optionsPanel.SetActive(false);
     }
 }
